@@ -10,6 +10,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
+@Setter
 public class EstacionamentoPrimaryKey implements Serializable {
     private int codigoIdentificadorEstacionamento;
 }

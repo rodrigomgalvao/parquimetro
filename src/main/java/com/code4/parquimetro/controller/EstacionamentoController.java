@@ -36,6 +36,10 @@ public class EstacionamentoController {
         } else {
 
             Estacionamento estacionamento = estacionamentoDto.toEstacionamento();
+            EstacionamentoPrimaryKey estacionamentoPrimaryKey =
+                    new EstacionamentoPrimaryKey(estacionamentoRepository.getMaxEstacionamentoId()+1);
+
+            estacionamento.setCodigoIdentificadorEstacionamento(estacionamentoPrimaryKey);
 
             estacionamentoRepository.save(estacionamento);
             return ResponseEntity.status(HttpStatus.CREATED).body(estacionamento);

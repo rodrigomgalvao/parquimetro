@@ -14,7 +14,6 @@ import java.math.BigDecimal;
 @Entity
 public class Estacionamento {
     @EmbeddedId
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private EstacionamentoPrimaryKey codigoIdentificadorEstacionamento;
     @Setter
     @NonNull
@@ -50,4 +49,7 @@ public class Estacionamento {
     @NonNull
     private BigDecimal valorHoraTarifaEstacionamento;
 
+    public void setCodigoIdentificadorEstacionamento(EstacionamentoPrimaryKey estacionamentoPrimaryKey){
+        codigoIdentificadorEstacionamento = estacionamentoPrimaryKey;
+    }
 }
