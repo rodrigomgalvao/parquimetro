@@ -18,4 +18,10 @@ public interface FormaPagamentoCondutorRepository
     @Query(value = "select * from forma_pagamento_condutor where cpf_condutor = :cpf_condutor ", nativeQuery = true)
     List<FormaPagamentoCondutor> findFormaPagamentoCondutorByCpfCondutor(@Param("cpf_condutor") String cpfCondutor);
 
+    @Query(value =
+            "select codigo_tipo_forma_pagamento " +
+            "from forma_pagamento_condutor " +
+                    "where cpf_condutor = :cpf_condutor " +
+                    "  and indicador_forma_pagamento_preferida = 'S'", nativeQuery = true)
+    int getTipoFormaPagamentoPreferidaCondutor(@Param("cpf_condutor") String cpfCondutor);
 }

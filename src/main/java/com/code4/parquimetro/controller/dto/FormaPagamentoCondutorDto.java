@@ -39,8 +39,7 @@ public class FormaPagamentoCondutorDto {
 
     public FormaPagamentoCondutor toFormaDePagamentoCondutor(){
         return new FormaPagamentoCondutor(
-                new FormaPagamentoCondutorPrimaryKey(
-                        new CondutorPrimaryKey(condutor.getCpfCondutor().getCpfCondutor()), 0),
+                new FormaPagamentoCondutorPrimaryKey(condutor.getCpfCondutor(), 0),
                 condutor,
                 TipoFormaPagamento.values()[codigoTipoFormaPagamento],
                 numeroCartaoFormaPagamento,

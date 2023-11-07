@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor
@@ -18,6 +18,8 @@ public class ControleEstacionamento {
     @MapsId("codigoIdentificadorEstacionamento")
     @JoinColumn(name = "codigo_identificador_estacionamento")
     @ManyToOne
+    @NonNull
+    @Setter
     private Estacionamento estacionamento;
     @MapsId("veiculoCondutorPrimaryKey")
     @JoinColumns({
@@ -25,6 +27,8 @@ public class ControleEstacionamento {
             @JoinColumn(name = "placa_veiculo_condutor")
     })
     @ManyToOne
+    @NonNull
+    @Setter
     private VeiculoCondutor veiculoCondutor;
     @Setter
     @NonNull
@@ -32,8 +36,8 @@ public class ControleEstacionamento {
     @Setter
     @NonNull
     private int duracaoTempoDesejadoControleEstacionamento;
-    private LocalDate timestampInicioControleEstacionamento = LocalDate.now();
-    private LocalDate timestampFimControleEstacionamento;
+    private LocalDateTime timestampInicioControleEstacionamento = LocalDateTime.now();
+    private LocalDateTime timestampFimControleEstacionamento;
     private BigDecimal valorTotalControleEstacionamento;
     private int numeroReciboControleEstacionamento;
 }

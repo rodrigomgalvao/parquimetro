@@ -33,8 +33,7 @@ public class VeiculoCondutorDto {
     private String anoModeloVeiculoCondutor;
     public VeiculoCondutor toVeiculoCondutor(){
         return new VeiculoCondutor(
-                new VeiculoCondutorPrimaryKey(
-                        new CondutorPrimaryKey(condutor.getCpfCondutor().getCpfCondutor()), placaVeiculoCondutor),
+                new VeiculoCondutorPrimaryKey(condutor.getCpfCondutor(), placaVeiculoCondutor),
                 condutor,
                 marcaVeiculoCondutor,
                 modeloVeiculoCondutor,

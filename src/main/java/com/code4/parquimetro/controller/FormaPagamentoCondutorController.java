@@ -45,7 +45,7 @@ public class FormaPagamentoCondutorController {
                 return ResponseEntity.badRequest().
                         body("Cadastramento não permitido: CPF do condutor do veículo inexistente na base.");
             }
-
+// TODO: 07/11/2023 Implementar crítica para tentativa de cadastramento de forma de pagamento preferida se já houver 
             formaPagamentoCondutor.setCondutor(optionalCondutor.get());
 
             String cpfCondutor = formaPagamentoCondutor.getId().getCpfCondutor().getCpfCondutor();
