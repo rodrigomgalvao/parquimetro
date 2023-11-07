@@ -1,6 +1,5 @@
 package com.code4.parquimetro.controller;
 
-import com.code4.parquimetro.controller.dto.CondutorDto;
 import com.code4.parquimetro.controller.dto.VeiculoCondutorDto;
 import com.code4.parquimetro.dominio.Condutor;
 import com.code4.parquimetro.dominio.CondutorPrimaryKey;
@@ -164,7 +163,7 @@ public class VeiculoCondutorController {
 
             VeiculoCondutor veiculoCondutorAtualizado = veiculoCondutorExistente.get();
 // TODO: 05/11/2023 Implementar resposta para tentativa de atualização da primary key
-            veiculoCondutorAtualizado.setId(veiculoCondutor.getId());
+            veiculoCondutorAtualizado.setId(veiculoCondutorPrimaryKey);
 
             Optional<Condutor> optionalCondutor = condutorRespository.
                     findById(veiculoCondutor.getCondutor().getCpfCondutor());

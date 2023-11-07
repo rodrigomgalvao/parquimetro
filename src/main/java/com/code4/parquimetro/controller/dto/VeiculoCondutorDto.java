@@ -1,13 +1,11 @@
 package com.code4.parquimetro.controller.dto;
 
 import com.code4.parquimetro.dominio.*;
-import com.code4.parquimetro.repository.CondutorRespository;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import org.hibernate.validator.constraints.br.CPF;
 
 public class VeiculoCondutorDto {
     @JsonProperty
@@ -24,7 +22,7 @@ public class VeiculoCondutorDto {
     private String modeloVeiculoCondutor;
     @JsonProperty
     @Min(value = 0, message = "Campo cor do veículo deve ser entre 0 e 11.")
-    @Max(value = 999, message = "Campo cor do veículo deve ser entre 0 e 11.")
+    @Max(value = 11, message = "Campo cor do veículo deve ser entre 0 e 11.")
     @NotNull(message = "Campo cor do veículo do condutor não pode ou nulo.")
     private int corVeiculoCondutor;
     @JsonProperty

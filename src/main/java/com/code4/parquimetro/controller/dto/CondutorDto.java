@@ -20,7 +20,7 @@ public class CondutorDto {
     private int ddiTelefoneCondutor;
     @JsonProperty
     @Min(value = 0, message = "Campo DDD deve ser entre 0 e 99.")
-    @Max(value = 999, message = "Campo DDD deve ser entre 0 e 99.")
+    @Max(value = 99, message = "Campo DDD deve ser entre 0 e 99.")
     @NotNull(message = "Campo DDD não pode ser nulo.")
     private int dddTelefoneCondutor;
     @JsonProperty

@@ -106,7 +106,7 @@ public class CondutorController {
 
                 Condutor condutorAtualizado = condutorExistente.get();
 // TODO: 05/11/2023 Implementar resposta para tentativa de atualização da primary key
-                condutorAtualizado.setCpfCondutor(condutor.getCpfCondutor());
+                condutorAtualizado.setCpfCondutor(condutorPrimaryKey);
                 condutorAtualizado.setNomeCondutor(condutor.getNomeCondutor());
                 condutorAtualizado.setDdiTelefoneCondutor(condutor.getDdiTelefoneCondutor());
                 condutorAtualizado.setDddTelefoneCondutor(condutor.getDddTelefoneCondutor());
