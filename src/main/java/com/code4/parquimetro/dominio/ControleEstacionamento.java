@@ -37,6 +37,7 @@ public class ControleEstacionamento {
     @NonNull
     private int duracaoTempoDesejadoControleEstacionamento;
     private LocalDateTime timestampInicioControleEstacionamento = LocalDateTime.now();
+    @Setter
     private LocalDateTime timestampFimControleEstacionamento;
     private BigDecimal valorTotalControleEstacionamento;
     private int numeroReciboControleEstacionamento;
