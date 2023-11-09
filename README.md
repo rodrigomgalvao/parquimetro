@@ -301,6 +301,13 @@ ___
 </details>
 
 ---
+
+## 💾Modelo lógico de dados
+
+![modelo_logico.png](images%2Fmodelo-logico%2Fmodelo_logico.png)
+
+___
+
 ## 👨‍🎓 Projeto desenvolvido por:
 
 [Jeferson Alves ](https://github.com/jefsantos)•
